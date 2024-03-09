@@ -1,0 +1,231 @@
+/* Body styles */
+body {
+  background-color: #121212;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Container styles */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  transition: 0.5s;
+}
+
+/* Heading styles */
+.container h1 {
+  color: #03dac6;
+  font-weight: 700;
+}
+
+/* Header styles */
+.container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Shopping cart icon styles */
+.container header .shopping {
+  position: relative;
+}
+
+.shopping i {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #bb86fc;
+  transition: all 0.25s ease;
+}
+
+.shopping i:hover {
+  color: #03dac6;
+}
+
+.shopping span {
+  background: #03dac6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #121212;
+  position: absolute;
+  top: -5px;
+  left: 80%;
+  padding: 3px 10px;
+}
+
+/* Product list styles */
+.container .list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 50px;
+}
+
+/* Card styles */
+.card {
+  position: fixed;
+  top: 0;
+  right: -400px; /* Hide initially */
+  width: 400px;
+  background-color: #121212;
+  border-left: 1px solid #03dac6;
+  height: 100vh;
+  transition: right 0.5s, transform 0.5s; /* Transition right and transform properties */
+  transform-origin: right; /* Set transform origin */
+}
+
+/* Active card styles */
+.active .card {
+  right: 0; /* Show card */
+  transform: translateX(0); /* Slide in from the right */
+}
+
+.active .container {
+  transform: translateX(-100px); /* Slide content slightly left */
+}
+
+/* Card header styles */
+.card h1 {
+  color: #bb86fc;
+  font-weight: 700;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Checkout button styles */
+.card .checkout div {
+  background-color: #03dac6;
+  color: #121212;
+  width: 60%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px auto;
+  border-radius: 25px;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.card .checkout div:hover {
+  background-color: #018786; /* Darker shade */
+}
+
+/* Second checkout button styles */
+.card .checkout div:nth-child(2) {
+  background-color: #6200ee;
+}
+
+/* Product item styles */
+.list .items {
+  text-align: center;
+  background-color: #03dac6;
+  padding: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  border-radius: 10px;
+  height: 60vh;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+  overflow: hidden;
+}
+
+.list .items:hover {
+  background-color: #6200ee;
+}
+
+.list .items img {
+  width: 100%;
+  height: 65%;
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Smooth transform transition */
+  margin-bottom: 20px;
+}
+
+.list .items:hover img {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.list .items .title {
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.list .items .price {
+  margin: 10px 0;
+  color: #121212;
+}
+
+.list .items:hover .title,
+.list .items:hover .price {
+  color: #fff;
+}
+
+/* Add to cart button styles */
+.list .items button {
+  background-color: transparent;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 80%;
+  padding: 10px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  transition: all 0.25s ease;
+}
+
+.list .items button:hover {
+  background-color: #1ab2e9;
+  color: #fff;
+}
+
+/* List card styles */
+.listCard li {
+  display: grid;
+  grid-template-columns: 100px repeat(3, 1fr);
+  color: #fff;
+  row-gap: 10px;
+}
+
+.listCard li div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listCard li img {
+  width: 60%;
+  height: 70px;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.listCard .count {
+  margin: 0 10px;
+  color: #121212;
+}
+
+/* Card title and price styles */
+.cardTitle,
+.cardPrice {
+  color: #fff;
+}
+
+/* Card button styles */
+.cardButton {
+  width: 30px;
+  height: 30px;
+  color: #03dac6;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 5px;
+}
